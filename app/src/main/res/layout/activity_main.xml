@@ -4,35 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8BC34A"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:id="@+id/Heading"
+        android:id="@+id/article_heading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="4dp"
-        android:background="#2196F3"
+        android:layout_height="53dp"
+        android:background="#2341AE"
         android:text="Mobile App Development"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="34sp" />
+        android:textSize="48sp" />
 
     <TextView
-        android:id="@+id/Topic"
+        android:id="@+id/article_subheading"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_below="@+id/Heading"
-        android:layout_marginTop="3dp"
-        android:background="#4CB576"
+        android:layout_height="49dp"
+        android:layout_below="@+id/article_heading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#FF5722"
         android:text="What is Mobile App?"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/About"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Topic"
-        android:layout_marginTop="-4dp"
-        android:text="@string/large_text" />
+    <ScrollView
+        android:layout_width="424dp"
+        android:layout_height="704dp"
+        android:layout_below="@+id/article_subheading"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="-78dp">
+
+        <TextView
+            android:id="@+id/article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/cardview_compat_inset_shadow"
+            android:autoLink="web"
+            android:text="@string/large_text" />
+    </ScrollView>
+
 </RelativeLayout>
